@@ -1,0 +1,20 @@
+pipeline {
+    agent any
+
+    stages {
+        stage('Build') {
+            steps {
+                script {
+                    // Pull the Docker image (optional if image is already available)
+                    sh 'docker pull hello-world'
+
+                    // Run the Docker container
+                    def output = sh(script: 'docker run hello-world', returnStdout: true).trim()
+                    
+                    // Print the output of the Docker container
+                    echo "Container output: ${output}"
+                }
+            }
+        }
+    }
+}
