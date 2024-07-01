@@ -5,7 +5,7 @@ pipeline {
         stage('Build') {
             steps {
                 script {
-                    // Pull the Docker image (optional if image is already available)
+                    // Pull the Docker image
                     sh 'docker pull hello-world'
 
                     // Run the Docker container
