@@ -76,4 +76,20 @@ Wait for the Jenkins to Install suggested plugins
 
 Create First Admin User or Skip the step [If you want to use this Jenkins instance for future use-cases as well, better to create admin user]
 
-## Jenkins Installation is Successful. You can now starting using the Jenkins 
+## Jenkins Installation is Successful. You can now start using the Jenkins 
+
+
+To restart Jenkins, 
+
+from url - 
+```
+http://<ec2-instance-public-ip>:8080/restart
+```
+or
+
+from ec2 instance - 
+```
+sudo systemctl restart jenkins
+```
+
+
